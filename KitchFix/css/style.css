@@ -5,6 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */
+ th {
+   font-family: 'Comfortaa', cursive;
+ }
 h1 {
   font-family: 'Comfortaa', cursive;
   text-align: center;
