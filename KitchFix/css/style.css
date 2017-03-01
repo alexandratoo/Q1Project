@@ -5,6 +5,25 @@
  *
  * Made By MaterializeCSS.com
  */
+ #info{
+   font-family: 'Comfortaa', cursive;
+   color: brown;
+ }
+ #instructions {
+   border: 1px solid brown;
+ }
+ h4 {
+   font-family: 'Comfortaa', cursive;
+   color: green;
+ }
+ #trivia { margin-top: 60px
+
+ }
+
+img {
+   width: 200px;
+ }
+
  nav {
    font-family: 'Comfortaa', cursive;
  }
@@ -21,7 +40,7 @@
 h1 {
   font-family: 'Comfortaa', cursive;
   text-align: center;
-    font-size: 1.4em;
+    font-size: 3em;
     margin: 0px auto;
     padding: 0px 0px 5px 0px;
     width: 50%;

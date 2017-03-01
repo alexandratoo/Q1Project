@@ -1,5 +1,24 @@
 $().ready(() => {
+  $('#trivia').click(function(event) {
+      event.preventDefault();
+      $.ajax({
+          url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/trivia/random`,
+          type: 'GET',
+          dataType: 'json',
+          success: function(data) {
 
+              console.log(data)
+              let trivia = data.text
+              $('#info').append(trivia)
+              },
+
+              error: function(err) {
+                  console.log(err);
+              },
+              beforeSend: function(xhr) {
+                  xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
+              }})
+            })
     console.log('we did it');
     var $recipes = $('#recipes');
     $('form').submit(function(event) {
@@ -33,6 +52,35 @@ $().ready(() => {
                   success: function(data){
                     // newObject[keys].image= mealPhoto
                   console.log(data)
+                  // for (object in data) {
+                  let image = data.image
+                  let title = data.title
+                  let minutes = data.preparationMinutes
+                  let instructions = data.instructions
+                  console.log(title);
+                  let col = $('<div>').addClass('row s3 m3 l2')
+                  let card = $('<div>').addClass('card hoverable small')
+                  let cardTitle = $('<h6>').addClass('card-title center').text(data.title)
+                  let content = $('<div>').addClass('card-content clicky center')
+                  let link = $('<a>').attr('href', '#modal2')
+                  let recPic = $('<img>').attr({src: data.image, id: data.id, data: data.title})
+                  $('#recipes').append(col)
+                  col.append(card)
+                  card.append(content)
+                  content.append(link)
+                  link.append(recPic)
+                  content.append(cardTitle)
+
+                  $('img').click(function(){
+                   let target = event.target.id
+                    let recTitle = $('<h5>').text(title).attr('style','text-align: center')
+                   let recInstructions = $('<p>').text(instructions).attr('style', 'text-align center')
+
+                   $('#instructions').append(recTitle)
+                           $('#instructions').append(recInstructions)
+
+                         })
+
                 },
                 // },
                 error: function(err) {
@@ -41,76 +89,6 @@ $().ready(() => {
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
                 }})
-
-
-
-            for (objects in data){
-
-                let id = object.id
-                let image = object.image
-                let Title = object.title
-                let col = $('<div>').addClass('col s3 m3 l2')
-                let card = $('<div>').addClass('card hoverable')
-                let title = $('<h6>').addClass('card-title center').text(object.title)
-                let content = $('<div>').addClass('card-content clicky center')
-                let link = $('<a>').attr('href', '#modal2')
-                let recPic = $('<img>').attr({src: object.image, id: object.id, data: object.title})
-                $('#recipes').append(col)
-                col.append(card)
-                card.append(content)
-                content.append(link)
-                link.append(recPic)
-                content.append(title)
-            }
-                // //
-                    // $('#recipes').append(`<li><p class="special"><b>Meal Options </b><em> ${object[i].title}</em></p></li>`)
-                //     $('#recipes').append(`<li><p class="special"><b>Time to prep </b><em>${meals[i]['readyInMinutes']}</em></p></li>`)
-                //     $('#recipes').append(`<li><p class="special"><b>Image </b><em>${meals[i]['imageUrls'][0]}</em></p></li>`)
-                //     $.ajax({
-
-                //       type: 'GET',
-                //       dataType: 'json',
-                //       success: function(recipeInfo){
-                //       console.log('lame', recipeInfo);
-                //     }
-                //
-                //
-                //     })
-                //
-                //     // let pic = $('<img src="https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?diet=' + showBooks[i] + '-L.jpg">');
-                // }
-                // testPic = $('<img>').attr('src','http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg')
-                // $('#recipes').append(testPic)
-
-                // var title = recipes.title;
-                // var image = recipes.image
-                //   $recipes.append('<li></li>')
-                //
-                // })
-                // $.each(recipes, function(i, recipe) {
-                //   $recipes.append('<li>title:'+ recipe.title + '</li>');
-                //
-                // })
-
-                // for (i = 0; i < objectBreakfast.length; i++) {
-                //   let breakfast = ('#breakfast');
-                //   let title = meals.('Title');
-                //   let time = meals.('readyInMinutes');
-                //   let div = $('<div>').text(`${title} (${time})`)
-                //   breakfast.append(div);
-                //   $(breakfast).show();
-                // }
-                // console.log('object', object);
-                // let image = object['image']
-                // console.log('image', image);
-                // let li = $('<li>')
-                // li.append(`${image}`)
-                // let sectionMenu = $('.sectionMenu ul')
-                // console.log('li', li[0]);
-                // sectionMenu.append(li)
-                // let ul = $('ul')
-                // ul.append(li)
-
 
 
             },
@@ -122,6 +100,26 @@ $().ready(() => {
                 xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
             }
         });
+        // $('#trivia').click(function(event) {
+        //     event.preventDefault();
+        //     $.ajax({
+        //         url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/trivia/random`,
+        //         type: 'GET',
+        //         dataType: 'json',
+        //         success: function(data) {
+        //
+        //             console.log(data)
+        //             let trivia = data.text
+        //             $('#info').append(trivia)
+        //             },
+        //
+        //             error: function(err) {
+        //                 console.log(err);
+        //             },
+        //             beforeSend: function(xhr) {
+        //                 xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
+        //             }})
+        //           })
 
     })
 })
