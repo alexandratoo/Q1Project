@@ -5,6 +5,16 @@
  *
  * Made By MaterializeCSS.com
  */
+ nav {
+   font-family: 'Comfortaa', cursive;
+ }
+ form {
+    font-family: 'Comfortaa', cursive;
+ }
+ body{
+   background-color: #dff5a4;
+   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+ }
  th {
    font-family: 'Comfortaa', cursive;
  }

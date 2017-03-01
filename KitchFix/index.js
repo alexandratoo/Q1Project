@@ -1,75 +1,120 @@
 $().ready(() => {
 
-    // const meals = [];
-    // const renderMeals = function() {
-    //     $('#dailyPlan').empty();
-    //     for (const meal of meals) {
-    //         const $col = $('<div>').addClass('col s4');
-    //         const $card = $('<div>').addClass('card hoverable');
-    //         const $content = $('<div').addClass('card-content');
-    //         const $title = $('<div').addClass('card-title truncate');
-    //         $title.attr({
-    //             'data-position': 'top',
-    //             'data-tooltip': recipe.title
-    //         });
-    //         $title.tooltip({
-    //             delay: 50
-    //         }).text(recipe.title);
-    //         const $picture = $('<img>').addClass('picture');
-    //         $picture.attr({
-    //             src: recipe.picture,
-    //             alt: `${recipe.picture}`
-    //         });
-    //         $content.append($title, $picture);
-    //         $card.append($content);
-    //
-    //         const $action = $('div').addClass('card-action center');
-    //         const $readyInMinutes = $('<a>');
-    //
-    //         $readyInMinutes.addClass('waves-effect waves-light btn modal-trigger');
-    //         $readyInMinutes.attr('href', `#${recipe.id}`);
-    //         $readyInMinutes.text('Ready in minutes! Click for instructions');
-    //
-    //         $action.append($readyInMinutes);
-    //         $card.append($action);
-    //
-    //         const $modal = $('<div>').addClass('modal').attr('id', recipe.id);
-    //         const $modalContent = $('<div>').addClass('modal-content');
-    //         const $modalHeader = $('<h4>').text(recipe.title);
-    //         // const $movieYear = $('<h6>').text(`Released in ${movie.year}`);
-    //         const $modalText = $('<p>').text(recipe.plot);
-    //         $modalContent.append($modalHeader, $modalText);
-    //         $modal.append($modalContent);
-    //
-    //         $col.append($card, $modal);
-    //
-    //         $('#listings').append($col);
-    //
-    //         $('.modal-trigger').leanModal();
-    //     }
-    // };
-    //
-    //     }
-    // }
-    // for (var i = 0; i< data.Search.length; i++) {
-    //   var thisRecipe = {
-    //
-    //   }
-    // }
+    console.log('we did it');
+    var $recipes = $('#recipes');
     $('form').submit(function(event) {
         event.preventDefault();
         let diet = $('#diet').val();
         let exclude = $('#excludes').val();
         let targetCalories = $('#calories').val();
         let timeFrame = $('#length').val();
+        let id = $('#id').val();
         $.ajax({
             url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?diet=${diet}&exclude=${exclude}&targetCalories=${targetCalories}&timeFrame=${timeFrame}`,
-            // url: `https://spoonacular-recipe-food-nutrition-vl.p.mashape.com/recipes/mealplans/generate?diet=${diet}&exclude=${exclude}&targetCalories=${targetCalories}&timeFrame=${timeFrame}`,
+
             type: 'GET',
             dataType: 'json',
             success: function(data) {
-                console.log(data);
+                console.log('success', data);
+                // let ds = data.Search
+                let newObject = {}
+                for (i =0; i < data.meals.length; i++) {
+                   newObject[data.meals[i].id] = {
+                     title: data.meals[i].title
+
+                   }
+                }
+                console.log(newObject);
+                for (keys in newObject)
+                $.ajax({
+                    url:`https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/${keys}/information`,
+                  type: 'GET',
+                  dataType: 'json',
+                  success: function(data){
+                    // newObject[keys].image= mealPhoto
+                  console.log(data)
+                },
+                // },
+                error: function(err) {
+                    console.log(err);
+                },
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
+                }})
+
+
+
+            for (objects in data){
+
+                let id = object.id
+                let image = object.image
+                let Title = object.title
+                let col = $('<div>').addClass('col s3 m3 l2')
+                let card = $('<div>').addClass('card hoverable')
+                let title = $('<h6>').addClass('card-title center').text(object.title)
+                let content = $('<div>').addClass('card-content clicky center')
+                let link = $('<a>').attr('href', '#modal2')
+                let recPic = $('<img>').attr({src: object.image, id: object.id, data: object.title})
+                $('#recipes').append(col)
+                col.append(card)
+                card.append(content)
+                content.append(link)
+                link.append(recPic)
+                content.append(title)
+            }
+                // //
+                    // $('#recipes').append(`<li><p class="special"><b>Meal Options </b><em> ${object[i].title}</em></p></li>`)
+                //     $('#recipes').append(`<li><p class="special"><b>Time to prep </b><em>${meals[i]['readyInMinutes']}</em></p></li>`)
+                //     $('#recipes').append(`<li><p class="special"><b>Image </b><em>${meals[i]['imageUrls'][0]}</em></p></li>`)
+                //     $.ajax({
+
+                //       type: 'GET',
+                //       dataType: 'json',
+                //       success: function(recipeInfo){
+                //       console.log('lame', recipeInfo);
+                //     }
+                //
+                //
+                //     })
+                //
+                //     // let pic = $('<img src="https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/mealplans/generate?diet=' + showBooks[i] + '-L.jpg">');
+                // }
+                // testPic = $('<img>').attr('src','http://cdn3-www.cattime.com/assets/uploads/2011/08/best-kitten-names-1.jpg')
+                // $('#recipes').append(testPic)
+
+                // var title = recipes.title;
+                // var image = recipes.image
+                //   $recipes.append('<li></li>')
+                //
+                // })
+                // $.each(recipes, function(i, recipe) {
+                //   $recipes.append('<li>title:'+ recipe.title + '</li>');
+                //
+                // })
+
+                // for (i = 0; i < objectBreakfast.length; i++) {
+                //   let breakfast = ('#breakfast');
+                //   let title = meals.('Title');
+                //   let time = meals.('readyInMinutes');
+                //   let div = $('<div>').text(`${title} (${time})`)
+                //   breakfast.append(div);
+                //   $(breakfast).show();
+                // }
+                // console.log('object', object);
+                // let image = object['image']
+                // console.log('image', image);
+                // let li = $('<li>')
+                // li.append(`${image}`)
+                // let sectionMenu = $('.sectionMenu ul')
+                // console.log('li', li[0]);
+                // sectionMenu.append(li)
+                // let ul = $('ul')
+                // ul.append(li)
+
+
+
             },
+            // },
             error: function(err) {
                 console.log(err);
             },
@@ -77,5 +122,6 @@ $().ready(() => {
                 xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
             }
         });
+
     })
 })
