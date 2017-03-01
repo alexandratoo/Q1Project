@@ -16,16 +16,16 @@
 <body>
     <nav class="white" role="navigation">
         <iv class="nav-wrapper container">
-          <!-- <a id="logo-container" href="#" class="brand-logo"> <img src="KITCHFIX.png" alt="image2" width= '20px'  /></a> -->
-          <ul class="right hide-on-med-and-down">
-            <li><a href="index.html">Home</a></li>
-          </ul>
+            <!-- <a id="logo-container" href="#" class="brand-logo"> <img src="KITCHFIX.png" alt="image2" width= '20px'  /></a> -->
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">Home</a></li>
+            </ul>
 
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        </div>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Navbar Link</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
     </nav>
 
 
@@ -33,16 +33,17 @@
         <div class="section no-pad-bot">
             <div class="container">
                 <br><br>
-                <h1 class="header center green-text">Input your menu options</h1>
+                <h1 class="header center green-text">Create your Menu!</h1>
                 <div class="row center">
                     <h5 class="header col s12 light">Let us know what you desire in your meals. We want to provide you with the best possible recipes for your lifestyle, be that gluten-free choices, low calorie, or vegetarian
                     </h5>
                     <button class="waves-effect waves-light btn-large" type='trivia' id='trivia'>Food Trivia!</button>
                 </div>
-              <div class='row center'>
-              <p class='row center' id='info'>
-              </p>
-              </div>
+
+                <div class='row left'>
+                    <p class='row left' id='info'>
+                    </p>
+                </div>
 
 
 
@@ -60,39 +61,43 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12">
-                          <div class="col s6">
-                            <form action="/action_page.php" method='GET'>
-                                Meals for a day, or for a week<br>
-                                <input type="text center" id='length'name="length" value=><br> Calories Per Day<br>
-                                <input type="text center" id='calories'name="calories" value=><br> Diet: Vegetarian, Paleo, Vegan etc<br>
-                                <input type="text center" name="diet" id='diet' value=><br> Excludes:<br>
-                                <input type="text center" name="excludes" id='excludes' value=><br><br>
+                            <div class="col s6">
+                                <form action="/action_page.php" method='GET'>
+                                    Meals for a day, or for a week<br>
+                                    <input type="text center" id='length' name="length" value=><br> Calories Per Day<br>
+                                    <input type="text center" id='calories' name="calories" value=><br> Diet: Vegetarian, Paleo, Vegan etc<br>
+                                    <input type="text center" name="diet" id='diet' value=><br> Excludes:<br>
+                                    <input type="text center" name="excludes" id='excludes' value=><br><br>
 
-                                <button type="submit" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
+                                    <button type="submit" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
 
-                            </form>
+                                </form>
+                            </div>
+                            <!-- <input type="text center" name="joke" id='joke' value=><br><br> -->
+                          <div>
+                            <button type="joke" id='joke'class="btn btn-success">Get a random food joke <span class="fa fa-arrow-right"></span></button>
+                            <p class='row center' id='joking'>
+                            </p>
                           </div>
-
-
                         </div>
                     </div>
                 </form>
 
             </div>
             <div class='row'>
-              <div id="recipes" class="col s6">
+                <div id="recipes" class="col s5">
 
-                <!-- <p>fjdkslfjkldfjdkslf </p> -->
-              </div>
-            </div>
-            <div id ='instructions' class='col s6'>
-            </div>
-            <!-- <div class='instructions'>
+                    <!-- <p>fjdkslfjkldfjdkslf </p> -->
+                </div>
+                <!-- </div> -->
+                <div id='instructions' class='col s6'>
+                </div>
+                <!-- <div class='instructions'>
             </div> -->
+                <!-- </div> -->
+
+
             </div>
-
-
-         </div>
 
 
 
@@ -125,6 +130,8 @@
             <script src="js/materialize.js"></script>
             <script src="js/init.js"></script>
             <script src="index.js"></script>
+            <!-- <script src="http://quotesondesign.com/api/3.0/api-3.0.js"
+type="text/javascript" charset="utf-8"></script> -->
 </body>
 
 </html>

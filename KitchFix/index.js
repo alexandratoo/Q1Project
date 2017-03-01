@@ -1,4 +1,28 @@
 $().ready(() => {
+  $('#joke').click(function(event) {
+      event.preventDefault();
+  // $.get("https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=yourname", function(data, status){
+  //   return data;
+  //   console.log(data)
+  // });
+  $.ajax({
+      url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random`,
+      type: 'GET',
+      dataType: 'json',
+      success: function(data) {
+
+          console.log(data)
+          let joke = data.text
+          $('#joking').append(joke)
+          },
+
+          error: function(err) {
+              console.log(err);
+          },
+          beforeSend: function(xhr) {
+              xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
+          }})
+        })
   $('#trivia').click(function(event) {
       event.preventDefault();
       $.ajax({
@@ -100,26 +124,7 @@ $().ready(() => {
                 xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
             }
         });
-        // $('#trivia').click(function(event) {
-        //     event.preventDefault();
-        //     $.ajax({
-        //         url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/trivia/random`,
-        //         type: 'GET',
-        //         dataType: 'json',
-        //         success: function(data) {
-        //
-        //             console.log(data)
-        //             let trivia = data.text
-        //             $('#info').append(trivia)
-        //             },
-        //
-        //             error: function(err) {
-        //                 console.log(err);
-        //             },
-        //             beforeSend: function(xhr) {
-        //                 xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
-        //             }})
-        //           })
+
 
     })
 })
