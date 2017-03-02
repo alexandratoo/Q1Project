@@ -5,9 +5,16 @@
  *
  * Made By MaterializeCSS.com
  */
- #joking{
-
+ .tabs{
+   letter-spacing: 3px;
+   font-size: 16px;
  }
+.tabs .tab a{
+  color: green;
+}
+.tabs .tab a:hover, .tabs .tab a.active{
+  color: green;
+}
 #submit{
   border-radius: 25px;
   box-shadow: 5px 5px darkgreen;
@@ -22,13 +29,21 @@
     border-radius: 25px;
     color: white;
     box-shadow: 5px 5px darkgreen;
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+
  }
  #info{
    font-family: 'Comfortaa', cursive;
-   color: brown;
+   color: black;
+   background-color: white;
+   font-size: 25px;
  }
  #instructions {
 background-color: white;
+
+margin-right: 30px;
+margin-top: 30px;
  }
  h4 {
    font-family: 'Comfortaa', cursive;
@@ -40,10 +55,14 @@ background-color: white;
    width: 300px;
  }
  #trivia {
-   margin-top: 50px
+   margin-top: 100px
  box-shadow: 5px 5px darkgreen;
+ font-family: 'Comfortaa', cursive;
+ font-size: 30px;
  }
-
+br{
+  font-size: 30px;
+}
 img {
    width: 200px;
  }
@@ -51,8 +70,12 @@ img {
  nav {
    font-family: 'Comfortaa', cursive;
  }
+
+
+
  form {
     font-family: 'Comfortaa', cursive;
+
  }
  body{
    background-color: #dff5a4;
@@ -112,8 +135,12 @@ p {
     top: 0;
   }
 }
-#page-footer{
-  
+#joking{
+  font-family: 'Comfortaa', cursive;
+  color: black;
+  background-color: white;
+  font-size: 25px;
+
 }
 .icon-block {
   padding: 0 15px;
@@ -124,6 +151,7 @@ p {
 #download-button{
   border-radius: 25px;
   box-shadow: 5px 5px darkgreen;
+  font-family: 'Comfortaa', cursive;
 }
 footer.page-footer {
   margin: 0;

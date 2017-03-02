@@ -88,7 +88,7 @@ $().ready(() => {
                   let minutes = data.preparationMinutes
                   let instructions = data.instructions
                   console.log(title);
-                  let col = $('<div>').addClass('row s4 m4 l2')
+                  let col = $('<div>').addClass('col s12 m5')
                   let card = $('<div>').addClass('card hoverable small')
                   let cardTitle = $('<h6>').addClass('card-title center').text(data.title)
                   let content = $('<div>').addClass('card-content clicky center')
