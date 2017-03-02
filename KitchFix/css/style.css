@@ -5,19 +5,43 @@
  *
  * Made By MaterializeCSS.com
  */
+ #joking{
+
+ }
+#submit{
+  border-radius: 25px;
+  box-shadow: 5px 5px darkgreen;
+}
+ #trivia{
+    border-radius: 25px;
+    color: white;
+    box-shadow: 5px 5px darkgreen;
+ }
+
+ #joke{
+    border-radius: 25px;
+    color: white;
+    box-shadow: 5px 5px darkgreen;
+ }
  #info{
    font-family: 'Comfortaa', cursive;
    color: brown;
  }
  #instructions {
-   
+background-color: white;
  }
  h4 {
    font-family: 'Comfortaa', cursive;
    color: green;
- }
- #trivia { margin-top: 60px
 
+}
+
+ .logo{
+   width: 300px;
+ }
+ #trivia {
+   margin-top: 50px
+ box-shadow: 5px 5px darkgreen;
  }
 
 img {
@@ -44,7 +68,7 @@ h1 {
     margin: 0px auto;
     padding: 0px 0px 5px 0px;
     width: 50%;
-
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 h5{
   font-family: 'Comfortaa', cursive;
@@ -88,14 +112,27 @@ p {
     top: 0;
   }
 }
-
+#page-footer{
+  
+}
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
   font-size: inherit;
 }
-
+#download-button{
+  border-radius: 25px;
+  box-shadow: 5px 5px darkgreen;
+}
 footer.page-footer {
   margin: 0;
+
+}
+.light{
+    font-family: 'Comfortaa', cursive;
+}
+#logo-container{
+  /*width: 10px*/
+
 }

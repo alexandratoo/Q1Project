@@ -1,4 +1,7 @@
 $().ready(() => {
+
+   $('ul.tabs').tabs('select_tab', 'tab_id');
+
   $('#joke').click(function(event) {
       event.preventDefault();
   // $.get("https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=yourname", function(data, status){
@@ -23,6 +26,7 @@ $().ready(() => {
               xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
           }})
         })
+        console.log(joke);
   $('#trivia').click(function(event) {
       event.preventDefault();
       $.ajax({
@@ -45,7 +49,9 @@ $().ready(() => {
             })
     console.log('we did it');
     var $recipes = $('#recipes');
-    $('form').submit(function(event) {
+    $('#submit-menu').click(function(event) {
+      console.log("submitted form and feeling pretty good about that");
+
         event.preventDefault();
         let diet = $('#diet').val();
         let exclude = $('#excludes').val();
@@ -82,7 +88,7 @@ $().ready(() => {
                   let minutes = data.preparationMinutes
                   let instructions = data.instructions
                   console.log(title);
-                  let col = $('<div>').addClass('row s3 m3 l2')
+                  let col = $('<div>').addClass('row s4 m4 l2')
                   let card = $('<div>').addClass('card hoverable small')
                   let cardTitle = $('<h6>').addClass('card-title center').text(data.title)
                   let content = $('<div>').addClass('card-content clicky center')

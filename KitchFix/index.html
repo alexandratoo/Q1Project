@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <title>Parallax Template - Materialize</title>
 
+
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="white" role="navigation">
+    <!-- <nav class="white" role="navigation">
         <div class="nav-wrapper container">
             <a id="logo-container" href="#" class="brand-logo"></a>
             <ul class="right hide-on-med-and-down">
@@ -23,145 +24,149 @@
 
             <ul id="nav-mobile" class="side-nav">
                 <li><a href="#">Navbar Link</a></li>
+                <li><a href="MenuResult.html">Menuuuuu...</a></li>
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
-    </nav>
-
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-                <br><br>
-                <h1>   <img src="KITCHFIX.png" alt="image2" /></h1>
-                <!-- <img src="KITCHFIX.png" alt="image" /> -->
-
-                <div class="row center">
-                    <h4 class="header col s12 ">Busy life? Sick of the same boring meals? Let us help you!</h4>
-                </div>
-                <div class="row center">
-                    <a href="menuinput.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Get Started</a>
-                </div>
-                <br><br>
-
+    </nav> -->
+    <header>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#home">Home</a></li>
+                    <li class="tab col s3"><a href="#jokes">Food Trivia and Jokes</a></li>
+                    <li class="tab col s3"><a href="#MenuInput" >Select Your Recipe!</a></li>
+                    <li class="tab col s3"><a href="#MenuResult">Menu Items</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="parallax"><img src="lemon.jpg" alt="Unsplashed background img 1"></div>
-    </div>
+            <div id="home" class="col s12">
+                <div id="index-banner" class="parallax-container">
+                    <div class="section no-pad-bot">
+                        <div class="container">
+                            <br><br>
+                            <h1>   <img src="KITCHFIX.png" class= 'logo'alt="image2" /></h1>
+                            <!-- <img src="KITCHFIX.png" alt="image" /> -->
 
+                            <div class="row center">
+                                <h4 class="header col s12 ">Busy life? Sick of the same boring meals? Let us help you!</h4>
+                            </div>
+                            <div class="row center">
+                                <a href="menuinput.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Get Started</a>
+                            </div>
+                            <br><br>
 
-    <div class="container">
-        <div class="section">
-
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons"></i></h2>
-                        <h5 class="center">Choose your desired type of diet</h5>
-
-                        <p class="light">Our weekly meal plans offer variety and flexibility allowing you to pick the recipes that best fit your needs that week.</p>
+                        </div>
                     </div>
+                    <div class="parallax"><img src="lemon.jpg" alt="Unsplashed background img 1"></div>
                 </div>
 
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons"></i></h2>
-                        <h5 class="center">Use our recipes to make a list of exactly what you need at the grocery store. No more impulse shopping.</h5>
 
-                        <p class="light"></p>
-                    </div>
-                </div>
+                <div class="container">
+                    <div class="section">
 
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center brown-text"><i class="material-icons"></i></h2>
-                        <h5 class="center">Cook and Enjoy</h5>
+                        <!--   Icon Section   -->
+                        <div class="row">
+                            <div class="col s12 m4">
+                                <div class="icon-block">
+                                    <h2 class="center brown-text"><i class="material-icons"></i></h2>
+                                    <h5 class="center">Choose your desired type of diet</h5>
 
-                        <p class="light">Getting home cooked meals on the table is now easier. Discover new menu options for you and your family</p>
+                                    <p class="light">Our daily meal plans offer variety and flexibility allowing you to pick the recipes that best fit your needs that week.</p>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4">
+                                <div class="icon-block">
+                                    <h2 class="center brown-text"><i class="material-icons"></i></h2>
+                                    <h5 class="center">Use our recipes to make a list of exactly what you need at the grocery store. No more impulse shopping.</h5>
+
+                                    <p class="light"></p>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4">
+                                <div class="icon-block">
+                                    <h2 class="center brown-text"><i class="material-icons"></i></h2>
+                                    <h5 class="center">Cook and Enjoy</h5>
+
+                                    <p class="light">Getting home cooked meals on the table is now easier. Discover new menu options for you and your family</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+            <div id="jokes" class="col s12">
+                <div id="index-banner" class="parallax-container">
+                    <div class="section no-pad-bot">
+                        <div>
+                            <button type="joke" id='joke' class="btn btn-success green">Get a random food joke <span class="fa fa-arrow-right"></span></button>
+                            <p class='row center' id='joking'>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="parallax"><img src="lemon.jpg" alt="Unsplashed background img 1"></div>
+            </div>
+            <!-- </div> -->
+            <div id="MenuInput" class="col s12">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <div class="col s6">
+                                    <form action="" method='GET'>
+                                        Meals for a day, or for a week<br>
+                                        <input type="text center" id='length' name="length" value=><br> Calories Per Day<br>
+                                        <input type="text center" id='calories' name="calories" value=><br> Diet: Vegetarian, Paleo, Vegan etc<br>
+                                        <input type="text center" name="diet" id='diet' value=><br> Excludes:<br>
+                                        <input type="text center" name="excludes" id='excludes' value=><br><br>
 
-        </div>
-    </div>
+                                        <button  class="btn btn-success green" id='submit-menu'>Submit <span class="fa fa-arrow-right"></span></button>
+
+                                    </form>
+                                </div>
+                                <!-- <input type="text center" name="joke" id='joke' value=><br><br> -->
+                                <!-- <div>
+                                <button type="joke" id='joke' class="btn btn-success green">Get a random food joke <span class="fa fa-arrow-right"></span></button>
+                                <p class='row center' id='joking'>
+                                </p>
+                            </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="MenuResult" class="col s12">
+                <div class='row'>
+                    <div id="recipes" class="col s5">
+                        <div id='instructions' class='col s6'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+    </header>
 
 
-    <!-- <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
-  </div> -->
-
-    <!-- <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div> -->
 
 
-    <!-- <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
-  </div> -->
+
+
+
 
     <footer class="page-footer green">
         <div class="container">
             <div class="row">
-                <!-- <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
 
 
-                </div> -->
-                <!-- <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
-                    <ul>
 
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div> -->
-                <div class="col l3 s12">
-                    <h5 class="experiment"></h5>
-                    <ul>
-
-                        <li><a class="white-text" href="#!"></a></li>
-                        <li><a class="white-text" href="#!"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                @AlexandraTooley
-            </div>
-        </div>
-    </footer>
-
-
-    <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+                <!--  Scripts-->
+                <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+                <script src="js/materialize.js"></script>
+                <script src="./index.js"></script>
 
 </body>
 
