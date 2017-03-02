@@ -88,8 +88,8 @@ $().ready(() => {
                   let minutes = data.preparationMinutes
                   let instructions = data.instructions
                   console.log(title);
-                  let col = $('<div>').addClass('col s12 m5')
-                  let card = $('<div>').addClass('card hoverable small')
+                  let col = $('<div>').addClass('col s6 m6 l4')
+                  let card = $('<div>').addClass('card hoverable')
                   let cardTitle = $('<h6>').addClass('card-title center').text(data.title)
                   let content = $('<div>').addClass('card-content clicky center')
                   let link = $('<a>').attr('href', '#modal2')
