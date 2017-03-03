@@ -5,24 +5,35 @@
  *
  * Made By MaterializeCSS.com
  */
- .tabs{
+ /*.tabs{
    letter-spacing: 3px;
    font-size: 16px;
+ }*/
+ #question{
+   width: 40%;
  }
 .tabs .tab a{
   color: green;
+  font-size: 16px;
+  letter-spacing: 3px;
 }
 .tabs .tab a:hover, .tabs .tab a.active{
   color: green;
 }
-#submit{
+/*#submit{
   border-radius: 25px;
   box-shadow: 5px 5px darkgreen;
-}
+}*/
  #trivia{
     border-radius: 25px;
     color: white;
     box-shadow: 5px 5px darkgreen;
+    -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+ }
+ #trivia:hover{
+   background-color: black;
+   color:black;
  }
 
  #joke{
@@ -30,14 +41,22 @@
     color: white;
     box-shadow: 5px 5px darkgreen;
     font-family: 'Comfortaa', cursive;
-    font-size: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+
+ }
+ #joke:hover{
+   background-color: black;
+   color: black;
 
  }
  #info{
    font-family: 'Comfortaa', cursive;
    color: black;
    background-color: white;
-   font-size: 25px;
+   font-size: 20px;
  }
  #instructions {
 background-color: white;
@@ -50,18 +69,47 @@ margin-top: 30px;
    color: green;
 
 }
-
+#submit-ask{
+  margin-top: 20px;
+  border-radius: 25px;
+  box-shadow: 5px 5px darkgreen;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+}
+#submit-ask:hover{
+  background-color: black;
+    color: black;
+}
+#submit-menu{
+  border-radius: 25px;
+  margin-bottom: 20px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   box-shadow: 5px 5px darkgreen;
+}
+#submit-menu:hover{
+  background-color: black;
+    color: black;
+}
  .logo{
-   width: 400px;
+   width: 300px;
  }
  #trivia {
-   margin-top: 100px
+   margin-top: 20px
  box-shadow: 5px 5px darkgreen;
  font-family: 'Comfortaa', cursive;
- font-size: 30px;
+ font-size: 16px;
+ -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
  }
-br{
-  font-size: 30px;
+ #triva:hover{
+   color:black;
+   background-color: black;
+ }
+#lame{
+  margin-top: 20px;
+  /*border: 1px solid green;
+  box-shadow: 4px 4px green;*/
 }
 img {
    width: 200px;
@@ -70,16 +118,20 @@ img {
  nav {
    font-family: 'Comfortaa', cursive;
  }
+#thissucks{
+  border: 1px solid green;
+  box-shadow: 4px 4px green;
 
+}
 
 
  form {
     font-family: 'Comfortaa', cursive;
-
+    font-size: 18px;
  }
  body{
-   background-color: #dff5a4;
-   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+   /*background-color: #dff5a4;*/
+   /*background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");*/
  }
  th {
    font-family: 'Comfortaa', cursive;
@@ -105,7 +157,12 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
-
+a{
+  background-color: #f4f4d3;
+}
+.tabs .tab a:hover, .tabs .tab  a.active {
+  background-color: #f4f4d3;
+}
 .button-collapse {
   color: #26a69a;
 }
@@ -139,8 +196,15 @@ p {
   font-family: 'Comfortaa', cursive;
   color: black;
   background-color: white;
-  font-size: 25px;
+  font-size: 16px;
 
+
+}
+#answer {
+  background-color: white;
+  font-family: 'Comfortaa';
+  color: black;
+  font-size: 16px;
 }
 .icon-block {
   padding: 0 15px;
