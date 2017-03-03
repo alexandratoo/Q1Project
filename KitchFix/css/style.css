@@ -40,7 +40,7 @@
     border-radius: 25px;
     color: white;
     box-shadow: 5px 5px darkgreen;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Nunito', sans-serif;
     font-size: 20px;
     margin-top: 10px;
     -webkit-transition-duration: 0.4s; /* Safari */
@@ -54,7 +54,7 @@
 
  }
  #info{
-   font-family: 'Comfortaa', cursive;
+  font-family: 'Nunito', sans-serif;
    color: black;
    background-color: white;
    font-size: 20px;
@@ -66,7 +66,7 @@ margin-right: 30px;
 margin-top: 30px;
  }
  h4 {
-   font-family: 'Comfortaa', cursive;
+  font-family: 'Nunito', sans-serif;
    color: green;
 
 }
@@ -98,7 +98,7 @@ margin-top: 30px;
  #trivia {
    margin-top: 20px
  box-shadow: 5px 5px darkgreen;
- font-family: 'Comfortaa', cursive;
+ font-family: 'Nunito', sans-serif;
  font-size: 20px;
  -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -117,7 +117,7 @@ img {
  }
 
  nav {
-   font-family: 'Comfortaa', cursive;
+font-family: 'Nunito', sans-serif;
  }
 #thissucks{
   border: 1px solid green;
@@ -126,21 +126,22 @@ img {
 }
 #answer{
   font-size: 20px;
+  font-family: 'Nunito', sans-serif;
 }
 
  form {
-    font-family: 'Comfortaa', cursive;
+  font-family: 'Nunito', sans-serif;
     font-size: 18px;
  }
  body{
-   /*background-color: #dff5a4;*/
+   /*background-color:#e6ffe6;*/
    /*background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");*/
  }
  th {
-   font-family: 'Comfortaa', cursive;
+   font-family: 'Nunito', sans-serif;
  }
 h1 {
-  font-family: 'Comfortaa', cursive;
+font-family: 'Nunito', sans-serif;
   text-align: center;
     font-size: 3em;
     margin: 0px auto;
@@ -149,7 +150,7 @@ h1 {
 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 h5{
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Nunito', sans-serif;
   color: green
 }
 nav ul a,
@@ -196,7 +197,7 @@ a{
   }
 }
 #joking{
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Nunito', sans-serif;
   color: black;
   background-color: white;
   font-size: 20px;
@@ -205,7 +206,7 @@ a{
 }
 #answer {
   background-color: white;
-  font-family: 'Comfortaa';
+  font-family: 'Nunito', sans-serif;
   color: black;
   font-size: 20px;
 }
@@ -218,14 +219,13 @@ a{
 #download-button{
   border-radius: 25px;
   box-shadow: 5px 5px darkgreen;
-  font-family: 'Comfortaa', cursive;
-}
+font-family: 'Nunito', sans-serif;
 footer.page-footer {
   margin: 0;
 
 }
 .light{
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Nunito', sans-serif;
 }
 #logo-container{
   /*width: 10px*/
