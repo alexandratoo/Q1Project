@@ -1,233 +1,266 @@
-/* Custom Stylesheet */
+    /* Custom Stylesheet */
+
+
 /**
  * Use this file to override Materialize files so you can update
  * the core Materialize files in the future
  *
  * Made By MaterializeCSS.com
  */
- /*.tabs{
+
+
+/*.tabs{
    letter-spacing: 3px;
    font-size: 16px;
  }*/
- #question{
-   width: 40%;
- }
-.tabs .tab a{
-  color: green;
-  font-size: 16px;
-  letter-spacing: 3px;
+
+#question {
+    width: 40%;
 }
-.tabs .tab a:hover, .tabs .tab a.active{
-  color: green;
+
+.tabs .tab a {
+    color: green;
+    font-size: 16px;
+    letter-spacing: 3px;
 }
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    color: green;
+}
+
+
 /*#submit{
   border-radius: 25px;
   box-shadow: 5px 5px darkgreen;
 }*/
- #trivia{
+
+#trivia {
     border-radius: 25px;
     color: white;
     box-shadow: 5px 5px darkgreen;
-    -webkit-transition-duration: 0.4s; /* Safari */
-     transition-duration: 0.4s;
- }
- #trivia:hover{
-   background-color: black;
-   color:black;
- }
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
 
- #joke{
+#trivia:hover {
+    background-color: black;
+    color: black;
+}
+
+#joke {
     border-radius: 25px;
     color: white;
     box-shadow: 5px 5px darkgreen;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     margin-top: 10px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-     transition-duration: 0.4s;
-
-
- }
- #joke:hover{
-   background-color: black;
-   color: black;
-
- }
- #info{
-  font-family: 'Nunito', sans-serif;
-   color: black;
-   background-color: white;
-   font-size: 20px;
- }
- #instructions {
-background-color: white;
-
-margin-right: 30px;
-margin-top: 30px;
- }
- h4 {
-  font-family: 'Nunito', sans-serif;
-   color: green;
-
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
 }
-#submit-ask{
-  margin-top: 20px;
-  border-radius: 25px;
-  box-shadow: 5px 5px darkgreen;
-  -webkit-transition-duration: 0.4s; /* Safari */
-   transition-duration: 0.4s;
-}
-#submit-ask:hover{
-  background-color: black;
+
+#joke:hover {
+    background-color: black;
     color: black;
 }
-#submit-menu{
-  border-radius: 25px;
-  margin-bottom: 20px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-   transition-duration: 0.4s;
-   box-shadow: 5px 5px darkgreen;
+
+#info {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    background-color: white;
+    font-size: 20px;
 }
-#submit-menu:hover{
-  background-color: black;
+
+#instructions {
+    background-color: white;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+h4 {
+    font-family: 'Nunito', sans-serif;
+    color: green;
+}
+
+#submit-ask {
+    margin-top: 20px;
+    border-radius: 25px;
+    box-shadow: 5px 5px darkgreen;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+#submit-ask:hover {
+    background-color: black;
     color: black;
 }
- .logo{
-   width: 300px;
- }
- #trivia {
-   margin-top: 20px
- box-shadow: 5px 5px darkgreen;
- font-family: 'Nunito', sans-serif;
- font-size: 20px;
- -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
- }
- #triva:hover{
-   color:black;
-   background-color: black;
- }
-#lame{
-  margin-top: 20px;
-  /*border: 1px solid green;
+
+#submit-menu {
+    border-radius: 25px;
+    margin-bottom: 20px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 5px 5px darkgreen;
+}
+
+#submit-menu:hover {
+    background-color: black;
+    color: black;
+}
+
+.logo {
+    width: 300px;
+}
+
+#trivia {
+    margin-top: 20px box-shadow: 5px 5px darkgreen;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+#triva:hover {
+    color: black;
+    background-color: black;
+}
+
+#lame {
+    margin-top: 20px;
+    /*border: 1px solid green;
   box-shadow: 4px 4px green;*/
 }
+
 img {
-   width: 200px;
- }
-
- nav {
-font-family: 'Nunito', sans-serif;
- }
-#thissucks{
-  border: 1px solid green;
-  box-shadow: 4px 4px green;
-
-}
-#answer{
-  font-size: 20px;
-  font-family: 'Nunito', sans-serif;
+    width: 200px;
 }
 
- form {
-  font-family: 'Nunito', sans-serif;
+nav {
+    font-family: 'Nunito', sans-serif;
+}
+
+#thissucks {
+    border: 1px solid green;
+    box-shadow: 4px 4px green;
+}
+
+#answer {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+form {
+    font-family: 'Nunito', sans-serif;
     font-size: 18px;
- }
- body{
-   /*background-color:#e6ffe6;*/
-   /*background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");*/
- }
- th {
-   font-family: 'Nunito', sans-serif;
- }
+}
+
+body {
+    /*background-color:#e6ffe6;*/
+    /*background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");*/
+}
+
+th {
+    font-family: 'Nunito', sans-serif;
+}
+
 h1 {
-font-family: 'Nunito', sans-serif;
-  text-align: center;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
     font-size: 3em;
     margin: 0px auto;
     padding: 0px 0px 5px 0px;
     width: 50%;
-text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-h5{
-  font-family: 'Nunito', sans-serif;
-  color: green
+
+h5 {
+    font-family: 'Nunito', sans-serif;
+    color: green
 }
-nav ul a,
-nav .brand-logo {
-  color: #444;
+
+nav ul a, nav .brand-logo {
+    color: #444;
 }
 
 p {
-  line-height: 2rem;
+    line-height: 2rem;
 }
-a{
-  background-color: #f4f4d3;
+
+a {
+    background-color: #f4f4d3;
 }
-.tabs .tab a:hover, .tabs .tab  a.active {
-  background-color: #f4f4d3;
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: #f4f4d3;
 }
+
 .button-collapse {
-  color: #26a69a;
+    color: #26a69a;
 }
 
 .parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
 }
-  .parallax-container .section {
+
+.parallax-container .section {
     width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
+@media only screen and (max-width: 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+    #index-banner .section {
+        top: 10%;
+    }
 }
-#joking{
-  font-family: 'Nunito', sans-serif;
-  color: black;
-  background-color: white;
-  font-size: 20px;
 
+@media only screen and (max-width: 600px) {
+    #index-banner .section {
+        top: 0;
+    }
+}
 
-}
-#answer {
-  background-color: white;
-  font-family: 'Nunito', sans-serif;
-  color: black;
-  font-size: 20px;
-}
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-#download-button{
-  border-radius: 25px;
-  box-shadow: 5px 5px darkgreen;
-font-family: 'Nunito', sans-serif;
-footer.page-footer {
-  margin: 0;
-
-}
-.light{
+#joking {
     font-family: 'Nunito', sans-serif;
+    color: black;
+    background-color: white;
+    font-size: 20px;
 }
-#logo-container{
-  /*width: 10px*/
 
+#answer {
+    background-color: white;
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    font-size: 20px;
 }
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+#download-button {
+    border-radius: 25px;
+    box-shadow: 5px 5px darkgreen;
+    font-family: 'Nunito', sans-serif;
+    footer.page-footer {
+        margin: 0;
+    }
+    .light {
+        font-family: 'Nunito', sans-serif;
+    }
+    #logo-container {
+        /*width: 10px*/
+    }

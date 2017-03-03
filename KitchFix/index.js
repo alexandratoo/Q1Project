@@ -3,32 +3,30 @@ $().ready(() => {
     $('ul.tabs').tabs('select_tab', 'tab_id');
     $('#submit-ask').click(function(event) {
         event.preventDefault();
-    let question = $('#question').val();
-    $.ajax({
-        url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/quickAnswer?q=${question}%3F`,
-        type: 'GET',
-        dataType: 'json',
-        success: function(data) {
+        let question = $('#question').val();
+        $.ajax({
+            url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/quickAnswer?q=${question}%3F`,
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
 
-            console.log(data)
-            let answers = data.answer
-            $('#answer').append(answers)
-        },
+                console.log(data)
+                let answers = data.answer
+                $('#answer').append(answers)
+            },
 
-        error: function(err) {
-            console.log(err);
-        },
-        beforeSend: function(xhr) {
-            xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
-        }
+            error: function(err) {
+                console.log(err);
+            },
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader("X-Mashape-Authorization", "0PAFuTUgNnmshTiXtoGA99RngNJxp1QWghAjsnZgHGsB5IUPwr");
+            }
+        })
     })
-  })
     $('#joke').click(function(event) {
         event.preventDefault();
-        // $.get("https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=yourname", function(data, status){
-        //   return data;
-        //   console.log(data)
-        // });
+
+
         $.ajax({
             url: `https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/food/jokes/random`,
             type: 'GET',
@@ -103,9 +101,9 @@ $().ready(() => {
                         type: 'GET',
                         dataType: 'json',
                         success: function(data) {
-                            // newObject[keys].image= mealPhoto
+
                             console.log(data)
-                            // for (object in data) {
+                            
                             let image = data.image
                             let title = data.title
                             let minutes = data.preparationMinutes
@@ -139,7 +137,7 @@ $().ready(() => {
                             })
 
                         },
-                        // },
+
                         error: function(err) {
                             console.log(err);
                         },
@@ -150,7 +148,7 @@ $().ready(() => {
 
 
             },
-            // },
+
             error: function(err) {
                 console.log(err);
             },
