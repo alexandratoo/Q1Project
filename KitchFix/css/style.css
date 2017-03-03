@@ -41,10 +41,11 @@
     color: white;
     box-shadow: 5px 5px darkgreen;
     font-family: 'Comfortaa', cursive;
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 10px;
     -webkit-transition-duration: 0.4s; /* Safari */
      transition-duration: 0.4s;
+
 
  }
  #joke:hover{
@@ -98,7 +99,7 @@ margin-top: 30px;
    margin-top: 20px
  box-shadow: 5px 5px darkgreen;
  font-family: 'Comfortaa', cursive;
- font-size: 16px;
+ font-size: 20px;
  -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
  }
@@ -123,7 +124,9 @@ img {
   box-shadow: 4px 4px green;
 
 }
-
+#answer{
+  font-size: 20px;
+}
 
  form {
     font-family: 'Comfortaa', cursive;
@@ -196,7 +199,7 @@ a{
   font-family: 'Comfortaa', cursive;
   color: black;
   background-color: white;
-  font-size: 16px;
+  font-size: 20px;
 
 
 }
@@ -204,7 +207,7 @@ a{
   background-color: white;
   font-family: 'Comfortaa';
   color: black;
-  font-size: 16px;
+  font-size: 20px;
 }
 .icon-block {
   padding: 0 15px;
